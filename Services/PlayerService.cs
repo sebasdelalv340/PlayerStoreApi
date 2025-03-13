@@ -27,6 +27,15 @@ public class PlayerService
     public async Task<Player?> GetAsync(string id) =>
         await _PlayersCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
 
+    public async Task<List<Player>> GetTop10PlayersAsync()
+    {
+        return await _PlayersCollection
+            .Find(_ => true) // Busca todos los jugadores
+            .SortByDescending(p => p.MaxScore) // Ordena por MaxScore en orden descendente
+            .Limit(10) // Limita los resultados a los 10 primeros
+            .ToListAsync(); // Convierte los resultados a una lista
+    }
+
     public async Task CreateAsync(Player newPlayer) =>
         await _PlayersCollection.InsertOneAsync(newPlayer);
 

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PlayerStoreApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e0a8139b50a492937c716d2baf88f4847409123")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ec07d2a87076e6f310640efd463866dafa783665")]
 [assembly: System.Reflection.AssemblyProductAttribute("PlayerStoreApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PlayerStoreApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

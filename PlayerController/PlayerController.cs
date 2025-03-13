@@ -17,6 +17,16 @@ public class PlayersController : ControllerBase
     public async Task<List<Player>> Get() =>
         await _PlayersService.GetAsync();
 
+    // Endpoint para obtener los 10 mejores jugadores
+    [HttpGet("top10")]
+    public async Task<List<Player>> GetTop10Players()
+    {
+
+        var topPlayers = await _PlayersService.GetTop10PlayersAsync();
+        return topPlayers; // Devuelve la lista de los 10 mejores jugadores
+        
+    }
+
     [HttpGet("{id:length(24)}")]
     public async Task<ActionResult<Player>> Get(string id)
     {
