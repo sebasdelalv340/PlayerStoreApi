@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.Configure<PlayerStoreDatabaseSettings>(
-    builder.Configuration.GetSection("PlayerStoreDatabase"));
+    builder.Configuration.GetSection("PlayerStoreDatabaseSettings"));
 
 builder.Services.AddSingleton<PlayerService>();
 
