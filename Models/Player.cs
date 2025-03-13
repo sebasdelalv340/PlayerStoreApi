@@ -12,5 +12,5 @@ public class Player
     [BsonElement("Name")]
     public string Name { get; set; } = null!;
 
-    public decimal MaxScore { get; set; }
+    public int MaxScore { get; set; }
 }
